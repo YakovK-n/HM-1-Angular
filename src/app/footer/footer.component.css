@@ -1,0 +1,10 @@
+div:first-of-type {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 550;
+}
+
+div:last-of-type {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}

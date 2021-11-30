@@ -1,0 +1,16 @@
+table {
+  border: 1px solid rgb(12, 10, 10);
+}
+th,tr,td {
+  border-bottom: 1px solid rgb(12, 10, 10);
+  border-right: 1px solid rgb(12, 10, 10) ;
+}
+#borderhead {
+  border: 1px solid rgb(12, 10, 10);
+  background-color: rgb(155, 161, 139);
+}
+tr:nth-child(even){background-color: #bda5a5;}
+
+tr:hover {
+  background-color: rgb(201, 201, 119);
+}

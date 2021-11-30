@@ -1,0 +1,45 @@
+<table>
+<thead id="borderhead">
+    <th colspan="4">Emploee list</th>
+</thead>
+<th>check</th>
+<th>id</th>
+<th>fname</th>
+<th>lname</th>
+
+ <tr *ngFor="let employee of employees" [class.selected]="employee === selectedEmployee" (click)="onSelect(employee)" >
+ <td><input type="checkbox"></td>    
+ <td><span class="badge">{{employee.id}}</span></td> 
+ <td>{{employee.fname}}</td>
+ <td>{{employee.lname}}</td>
+ </tr>
+
+</table>
+
+<div *ngIf="selectedEmployee">
+
+<h2>{{selectedEmployee.fname | uppercase}} {{selectedEmployee.lname |
+    uppercase}} Details</h2>
+     <div><span>id: </span>{{selectedEmployee.id}}</div>
+     <div>
+     <label for="employee-fname">Employee first name: </label>
+     <input id="employee-fname" [(ngModel)]="selectedEmployee.fname"
+    placeholder="fname">
+     <br>
+     <label for="employee-lname">Employee last name: </label>
+     <input id="employee-lname" [(ngModel)]="selectedEmployee.lname"
+    placeholder="lname">
+    <br>
+     <label for="employee-dateofbirth">Employee date of birth: </label>
+     <input id="employee-dateofbirth" [(ngModel)]="selectedEmployee.dateofbirth"
+    placeholder="dateofbirth">
+    <br>
+     <label for="employee-salary">Employee salary: </label>
+     <input id="employee-salary" [(ngModel)]="selectedEmployee.salary"
+    placeholder="salary">
+    <br>
+     <label for="employee-email">Employee email: </label>
+     <input id="employee-email" [(ngModel)]="selectedEmployee.email"
+    placeholder="email">
+     </div>
+</div>     
