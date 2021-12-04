@@ -3,6 +3,6 @@ export interface Employee {
     fname: string;
     lname: string;
     dateofbirth: string
-    salary: string;
+    salary: number;
     email: string;
     }
